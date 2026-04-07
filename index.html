@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Initia</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f7f5ff;
+      color: #2b2b2b;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .card {
+      width: 90%;
+      max-width: 500px;
+      background: white;
+      padding: 25px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    }
+
+    h1 {
+      text-align: center;
+      color: #6c5ce7;
+    }
+
+    input {
+      width: 100%;
+      margin-top: 10px;
+      padding: 10px;
+      border-radius: 10px;
+      border: 1px solid #ddd;
+    }
+
+    button {
+      margin-top: 15px;
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 10px;
+      background: #6c5ce7;
+      color: white;
+      font-size: 16px;
+    }
+
+    .output {
+      margin-top: 20px;
+      white-space: pre-wrap;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="card">
+    <h1>Initia ✨</h1>
+    <p>Turn your idea into a real plan.</p>
+
+    <input id="idea" placeholder="What do you want to create?" />
+    <input id="goal" placeholder="What’s your goal?" />
+    <input id="time" placeholder="How much time per day?" />
+
+    <button onclick="generate()">Generate</button>
+
+    <div class="output" id="output"></div>
+  </div>
+
+  <script>
+    function generate() {
+      const idea = document.getElementById("idea").value;
+      const goal = document.getElementById("goal").value;
+      const time = document.getElementById("time").value;
+
+      document.getElementById("output").innerText =
+`💡 Ideas:
+- Start a small version of ${idea}
+- Share it and get feedback
+- Improve step by step
+
+🗓️ Plan:
+Day 1: Brainstorm
+Day 2: Research
+Day 3: Build
+Day 4: Test
+Day 5: Improve
+
+✨ Reminder:
+Stay consistent with ${time}/day toward: ${goal}`;
+    }
+  </script>
+</body>
+</html>
